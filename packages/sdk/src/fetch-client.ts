@@ -1626,6 +1626,18 @@ export type MetadataSearchDto = {
     libraryId?: string | null;
     /** Filter by camera make */
     make?: string | null;
+    /** Filter by maximum aspect ratio (width/height) */
+    maxAspectRatio?: number;
+    /** Filter by maximum image height */
+    maxHeight?: number;
+    /** Filter by maximum image width */
+    maxWidth?: number;
+    /** Filter by minimum aspect ratio (width/height) */
+    minAspectRatio?: number;
+    /** Filter by minimum image height */
+    minHeight?: number;
+    /** Filter by minimum image width */
+    minWidth?: number;
     /** Filter by camera model */
     model?: string | null;
     /** Filter by OCR text content */
@@ -1747,6 +1759,18 @@ export type RandomSearchDto = {
     libraryId?: string | null;
     /** Filter by camera make */
     make?: string | null;
+    /** Filter by maximum aspect ratio (width/height) */
+    maxAspectRatio?: number;
+    /** Filter by maximum image height */
+    maxHeight?: number;
+    /** Filter by maximum image width */
+    maxWidth?: number;
+    /** Filter by minimum aspect ratio (width/height) */
+    minAspectRatio?: number;
+    /** Filter by minimum image height */
+    minHeight?: number;
+    /** Filter by minimum image width */
+    minWidth?: number;
     /** Filter by camera model */
     model?: string | null;
     /** Filter by OCR text content */
@@ -1813,6 +1837,18 @@ export type SmartSearchDto = {
     libraryId?: string | null;
     /** Filter by camera make */
     make?: string | null;
+    /** Filter by maximum aspect ratio (width/height) */
+    maxAspectRatio?: number;
+    /** Filter by maximum image height */
+    maxHeight?: number;
+    /** Filter by maximum image width */
+    maxWidth?: number;
+    /** Filter by minimum aspect ratio (width/height) */
+    minAspectRatio?: number;
+    /** Filter by minimum image height */
+    minHeight?: number;
+    /** Filter by minimum image width */
+    minWidth?: number;
     /** Filter by camera model */
     model?: string | null;
     /** Filter by OCR text content */
@@ -1881,6 +1917,18 @@ export type StatisticsSearchDto = {
     libraryId?: string | null;
     /** Filter by camera make */
     make?: string | null;
+    /** Filter by maximum aspect ratio (width/height) */
+    maxAspectRatio?: number;
+    /** Filter by maximum image height */
+    maxHeight?: number;
+    /** Filter by maximum image width */
+    maxWidth?: number;
+    /** Filter by minimum aspect ratio (width/height) */
+    minAspectRatio?: number;
+    /** Filter by minimum image height */
+    minHeight?: number;
+    /** Filter by minimum image width */
+    minWidth?: number;
     /** Filter by camera model */
     model?: string | null;
     /** Filter by OCR text content */
@@ -5560,7 +5608,7 @@ export function getExploreData(opts?: Oazapfts.RequestOpts) {
 /**
  * Search large assets
  */
-export function searchLargeAssets({ albumIds, city, country, createdAfter, createdBefore, isEncoded, isFavorite, isMotion, isNotInAlbum, isOffline, lensModel, libraryId, make, minFileSize, model, ocr, personIds, rating, size, state, tagIds, takenAfter, takenBefore, trashedAfter, trashedBefore, $type, updatedAfter, updatedBefore, visibility, withDeleted, withExif }: {
+export function searchLargeAssets({ albumIds, city, country, createdAfter, createdBefore, isEncoded, isFavorite, isMotion, isNotInAlbum, isOffline, lensModel, libraryId, make, maxAspectRatio, maxHeight, maxWidth, minAspectRatio, minFileSize, minHeight, minWidth, model, ocr, personIds, rating, size, state, tagIds, takenAfter, takenBefore, trashedAfter, trashedBefore, $type, updatedAfter, updatedBefore, visibility, withDeleted, withExif }: {
     albumIds?: string[];
     city?: string | null;
     country?: string | null;
@@ -5574,7 +5622,13 @@ export function searchLargeAssets({ albumIds, city, country, createdAfter, creat
     lensModel?: string | null;
     libraryId?: string | null;
     make?: string | null;
+    maxAspectRatio?: number;
+    maxHeight?: number;
+    maxWidth?: number;
+    minAspectRatio?: number;
     minFileSize?: number;
+    minHeight?: number;
+    minWidth?: number;
     model?: string | null;
     ocr?: string;
     personIds?: string[];
@@ -5610,7 +5664,13 @@ export function searchLargeAssets({ albumIds, city, country, createdAfter, creat
         lensModel,
         libraryId,
         make,
+        maxAspectRatio,
+        maxHeight,
+        maxWidth,
+        minAspectRatio,
         minFileSize,
+        minHeight,
+        minWidth,
         model,
         ocr,
         personIds,
